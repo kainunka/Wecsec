@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Websec18Plus</ion-title>
+
+    <!---<button ion-button side-right (click)="logout()">
+      <ion-icon name="add"></ion-icon>
+    </button>-->
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content style="background-color: #212121;">
+
+  <ion-fab top right edge>
+      <button ion-fab mini color="light"><ion-icon name="add"></ion-icon></button>
+      <ion-fab-list>
+        <button ion-fab (click)="fav()"><ion-icon name="flame"></ion-icon></button>
+      </ion-fab-list>
+  </ion-fab>
+
+
+
+
+<div class="con">
+  <ion-list align="center">
+    <ion-list-header style="background-color:#212121;">
+
+      <p>  <img src="assets/avartar.png" style="max-width: 100px !important;"></p>
+      <h2 class="head">You Need Right?</h2>
+      <h3 class="head">Look Websec 18 Plus</h3>
+      <p class="body">เงี่ยนก็เข้ามา สังคมแห่งมวลมนุษย์ชาติ</p>
+    </ion-list-header>
+  </ion-list>
+
+
+<ion-item color="cardCon" class="itemFix">
+
+
+  <ion-row center class="headBar" padding>
+    <ion-col class="col1">
+      <ion-icon name="contact"></ion-icon>
+      My Friend
+    </ion-col>
+    <ion-col class="col2">
+        <ion-icon name="arrow-forward" (click)="viewAll()"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+
+
+  <ion-scroll scrollX="true" class="scrollColor1">
+
+    <div *ngFor="let item of items | async">
+      <ion-card *ngIf="item.friend == true" (click)="viewVideo(item.$key)" id="card" class="animated fadeIn">
+        <ion-card-header>
+          <img src="{{item.picture}}" max-width="100%">
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row>
+            <ion-col width-80>
+              <h2>{{ item.name }}</h2>
+              <p>{{ item.description }}</p>
+            </ion-col>
+
+            <ion-col width-20 align="right">
+              <ion-icon name="star" isActive="true" color="yellow"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+  </ion-scroll>
+
+
+
+
+</ion-item>
+
+</div>
+
+</ion-content>

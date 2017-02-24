@@ -1,0 +1,39 @@
+page-view-all {
+  ion-card{
+    max-width: 150px !important;
+    max-height: 210px !important;
+    display: inline-block;
+  }
+
+
+  .conHeader {
+    max-width: 1280px !important;
+    background-color: #F2F2F2;
+    display: inline-block;
+  }
+
+  .con {
+    text-align: left;
+    border: 2px dashed #B0BEC5;
+    margin: 5px;
+    height: 100%;
+  }
+
+  ion-card-header {
+    background-color: #CFD8DC;
+    margin-bottom: 10px;
+
+  }
+
+  .head {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .body {
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+
+}
